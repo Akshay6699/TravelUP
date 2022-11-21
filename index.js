@@ -104,7 +104,7 @@ passport.use(
     },
     function (accessToken, refreshToken, profile, done) {
       userProfile = profile;
-      // console.log(profile)
+      // console.log(profile);
       return done(null, userProfile);
     }
   )
