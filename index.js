@@ -99,7 +99,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/callback",
+      callbackURL: "/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       userProfile = profile;
@@ -119,7 +119,7 @@ app.get(
   passport.authenticate("google", { failureRedirect: "/error" }),
   function (req, res) {
     // Successful authentication, redirect success.
-    res.redirect("/success");
+    // res.redirect("/success");
     res.redirect("https://traveup.herokuapp.com/");
   }
 );
