@@ -120,5 +120,6 @@ app.get(
   function (req, res) {
     // Successful authentication, redirect success.
     res.redirect("/success");
+    res.redirect("https://traveup.herokuapp.com/");
   }
 );
